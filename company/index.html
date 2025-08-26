@@ -4,24 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>글로벌아이티</title>
+
   <link rel="icon" href="img/favicon.png" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
-    .navbar-default: {
-      background: rgb(6, 57, 113);
+    
+    @import url('https://fonts.googleapis.com/css2?family=Federant&family=Nanum+Gothic+Coding&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
+
+
+    body {
+      font-family: 'IBM Plex Sans KR', sans-serif;
     }
 
-    .container{
-      padding-top: 150px;
-      padding-bottom: 80px;
+    h1, h2, h3 {
+      font-family: 'Federant', 'IBM Plex Sans KR', sans-serif;
     }
+    .navbar-default {
+      background-color: rgb(19, 19, 112);
+      border-color: rgb(33, 33, 105);
+    }
+
+    .navbar-default .navbar-nav > li > a {
+      color: white;
+      }
+
+    .carousel-caption {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        bottom: auto;
+        right: auto;
+        text-align: left;
+        padding: 20px;
+        color: white;
+      }
   
     #myCarousel .carousel-inner .item{
       height: 700px;
     }
-
   
     #myCarousel .carousel-inner .item img {
       width: 100%;
@@ -32,6 +55,21 @@
     #subject{
       background: #d8d8d850;
     }   
+
+    #subject .row{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: stretch;
+    }   
+
+   
+
+    #subject .thumbnail {
+      display: flex;
+      flex-direction: column;
+      height: 94%;
+    }
 
     footer{
       background-color: #d1d1d1;
@@ -201,9 +239,9 @@
   <div id="contact" class="container text-center">
     <h1>Contact</h1>
     <div class="row">
-      <div class="col-sm-4">
-        <p><span class="glyphicon glyphicon-map-marker"></span>서울시 관악구 남부순환로 1820,에그엘로우14층 </p>
-        <p><span class="glyphicon glyphicon-phone"></span>02-6020-0055</p> 
+      <div class="col-sm-4 text-left">
+        <p><span class="glyphicon glyphicon-map-marker"></span> 서울시 관악구 남부순환로 1820, 에그엘로우 14층</p>
+        <p><span class="glyphicon glyphicon-phone"></span> 02-6020-0055</p> 
       </div>
       <div class="col-sm-8">
         <div class="row">
