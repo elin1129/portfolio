@@ -47,6 +47,10 @@ header{
   display: inline-block;
 }
 
+#gnb li.on i {
+  display: inline-block !important;
+}
+
 .fa {
   margin-right: 1px;
   vertical-align: middle;
