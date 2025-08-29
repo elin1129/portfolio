@@ -1,0 +1,182 @@
+@import url(http://fonts.googleapis.com/css?family=Play);
+@import url(http://fonts.googleapis.com/css2?family=Plaster);
+
+/* Reset CSS */
+*{margin: 0;padding: 0;}
+ul,ol{list-style: none;}
+a{text-decoration: none;color:#bbb}
+body{position: fixed;width: 100%;height: 100%;background: #111;}
+
+/* 배경동영상 - full screen */
+.vid{width: 100%;height: 100%;position: fixed;top: -60px;left: 0px;opacity: 0.9;}
+.vid video{
+  width: 100%; 
+  min-width: 1600px; 
+}
+
+/* Alton 로고 */
+h1{position: fixed;top:30px;left:40px;z-index:10;}
+h1 img{
+  width: 150px;
+  height: auto;
+  filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.8));
+  }
+header{
+    width:700px;
+    height: 100%; 
+    position:fixed;
+    top:0px; left:-490px;
+    transform: skewX(-40deg);
+    background: linear-gradient(to bottom, rgb(255, 180, 60), rgb(255, 102, 0));}
+
+/* 1depth */
+#gnb { 	width:220px; position:absolute; top:105px; right:0px;}
+#gnb>li{position:relative;}
+#gnb>li>a {display: block; width:220px; height:50px; font:bold 18px/3 play; color:#222; box-sizing:border-box; padding-right:40px; text-align:right;}
+#gnb>li.on>a{background: #111; color:#fff;}
+#gnb>li:hover>a{background: #fff; color: #ff7d04;}
+#gnb em{display: inline-block; transform: skewX(40deg); !important;}
+#gnb em i{margin-right: 20px;}
+
+#gnb i {
+  display: none;
+  transition: 0.3s;
+}
+
+#gnb > li:hover i {
+  display: inline-block;
+}
+
+.fa {
+  margin-right: 1px;
+  vertical-align: middle;
+}
+
+/* 2depth */
+#gnb ul{
+  position: absolute; 
+  left: :0px;
+  top:0px;
+  opacity: 0; 
+}
+
+#gnb>li:hover ul {
+   opacity: 0.9;
+   left:205px;
+}
+
+#gnb ul a {
+  display: block; 
+  width:160px; 
+  height:40px; 
+  background: #222; 
+  border-bottom:2px solid rgb(255, 163, 26); font:bold 16px/2.5 arial; color:#fff; 
+  box-sizing:border-box; 
+  padding-left:50px;
+  transition: transform 0.2s ease;
+}
+
+#gnb ul a:hover {
+  transform: scale(1.1);
+}
+
+/* sns 버튼 */
+#sns{
+    position: fixed; 
+    top:30px; 
+    right:50px;}
+#sns li { float:left; margin-right:30px;}
+#sns .fa { 
+    font-size:25px; 
+    color:#ff9900; 
+    opacity:1; 
+    transform:scale(1); transition:all 0.3s;}
+#sns .fa:hover { opacity:1; transform:scale(1.4);}
+
+/* 텍스트 박스 */
+.txtBox { width:600px; height:280px; position:fixed; top:150px; right:70px; }
+.txt { position:absolute; top:155px; right:0px; font-size:40px; font-family:play; color:#bbb; letter-spacing:-2px;}
+.txt b { font:bold 34px arial; color:#ff9900; 	margin-left:20px;}
+.tit { 
+    position:absolute; 
+    top:50px; right:0px; 
+    font-size:85px; 
+    color:#ff9900; 
+    font-family: 'Plaster', cursive; letter-spacing:-1px;
+    border-bottom: 2px solid white;
+    display: inline-block;
+}
+
+/* contents 레이아웃 */
+#side { 
+    width:800px; 
+    height:100%; 
+    position:fixed; 
+    bottom:0px; 
+    right:-800px; 
+    background:#111; opacity:0.5; transform:skewX(-40deg); transition:all 0.5s;
+}
+
+#side:hover { 
+    right:-500px; 
+    opacity:0.8;
+    background: linear-gradient(to bottom, #ff9900, #ff6600);
+}
+
+#side .con { 
+  width:400px;
+  height:100%; 
+  position:absolute; 
+  left:150px; 
+  bottom:0px; 
+  background:#000000; 	
+  box-sizing:border-box; 
+  padding:10px; 
+  transition:all  1s;}
+
+#side:hover .con { left:50px;}
+
+/* contents내 썸네일 */
+#side .con p { 
+    width: 300px; 
+    height:100px; 
+    position:absolute; 
+    left:50px;
+}
+#side .con p em { 
+    display:inline-block; 
+    font:bold 16px/1.7 
+    arial; color:#ff9900; 
+    transform:skewX(40deg);}
+#side .con p img { 
+    width:300px; 
+    height:100px; 
+    opacity:0.3; 
+    transition:all 0.7s;}
+#side .con p img:hover { opacity:1;}
+#side .con p:nth-child(1) { bottom:310px; transform: translateX(200px); transition:all  0.4s;}
+#side .con p:nth-child(2) { bottom:180px; transform: translateX(200px); transition:all  0.8s;}
+#side .con p:nth-child(3) { bottom:50px; transform: translateX(200px); transition:all  1.2s;}
+#side:hover .con p { transform:translateX(0px);}
+
+.fa-arrow-left {
+  font-size: 20px; 
+  color: #ffffff;   
+  margin-right: 20px;
+  vertical-align: middle;
+}
+
+/* 자동롤링 버튼 */
+#side. btn {width:150px; height: 50px; position:absolute; bottom:40px; left:100px; color:#b9fb05; transform:skewX(40deg);}
+#side:hover .btnContents { left:700px;}	
+.btnContents i { font-size:60px; position:absolute; bottom:0px; right:0px; opacity:1;}
+.btnContents i:nth-child(1) { animation:ani linear 1.5s 0s infinite;}
+.btnContents i:nth-child(2) { animation:ani linear 1.5s 0.5s infinite;}
+.btnContents i:nth-child(3) { animation:ani linear 1.5s 1.0s infinite;}
+
+/* 애니메이션 아이콘 */
+
+@keyframes ani {
+    0% {right:0px; transform:sclae(1); opacity: 1;}
+    100% {right:100px; transform: scale(1.5); opacity: 0;}
+}
